@@ -1,28 +1,45 @@
-import Card from "./components/Card";
 import "./App.css";
-import { useEffect, useState } from "react";
+import Card from "./components/Card";
+import React, { useEffect, useState } from "react";
 
-function App() {
-	const [users, setUsers] = useState([]);
-	useEffect(() => {
-		fetch("https://661f319616358961cd93bc40.mockapi.io/api/v2/users")
-			.then((res) => {
-				return res.json();
-			})
-			.then((data) => {
-				setUsers(data);
-				// console.log(data);
-			});
-	}, []); //users es una arreglo, iteraremos con map
-	return (
-		<>
-			<div>
-				{users.map((user) => (
-					<Card key={user.id} user={user} />
-				))}
-			</div>
-		</>
-	);
+function shuffleArray(array) {
+  // Algoritmo de mezcla de Fisher-Yates
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
 }
 
-export default App;
+function App() {
+  const [user, setuser] = useState([]);
+
+  const [numberOfCards, setNumberOfCards] = useState(10); // Define el número deseado de cartas
+  
+  useEffect(() => {
+    fetch("https://rickandmortyapi.com/api/character")
+      .then((Response) => {
+        return Response.json();
+      })
+      .then((data) => {
+        setuser(data.results);
+        console.log(data.results);
+      });
+  }, []);
+
+  // Mezcla los usuarios de manera aleatoria
+  const shuffledUsers = shuffleArray(user);
+
+  // Utiliza slice para limitar la cantidad de cartas mostradas
+  const limitedUsers = shuffledUsers.slice(0, numberOfCards);
+
+  return (
+    <>
+      {limitedUsers.map((user) => (
+        <Card key={user.name} user={user} />
+      ))}
+    </>
+  );
+}
+
+export default App;

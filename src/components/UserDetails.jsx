@@ -6,13 +6,14 @@ const UserDetails = ({user}) => {
 	return (
 		<div>
 			<div className="img-container">
-				<img src={user.avatar} alt={`avatar de ${user.name}`} />
+				<img src={user.image} alt={`avatar de ${user.name}`} />
 			</div>
 			<div className="personal section">
-				<h2 className="personal__name">{user.name}</h2>
-				<p className="personal__address">{user.location}</p>
+				<h2 className="personal__name">Nombre:{user.name}</h2>
+				<p className="personal__address">Género: {user.gender}</p>
 			</div>
-			<p className="social__intro">{user.description}</p>
+			<p className="social__intro">Especie:{user.species}</p>
+			<p className="social__status">Estatus:{user.status}</p>
 		</div>
 	);
 };

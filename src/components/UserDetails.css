@@ -32,3 +32,9 @@ img {
     font-weight: 550;
     color: var(--LightGray);
 }
+
+.social__status {
+    font-size: 0.8rem;
+    font-weight: 550;
+    color: red;
+}

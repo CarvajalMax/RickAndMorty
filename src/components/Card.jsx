@@ -4,17 +4,15 @@ import ButtonSection from "./ButtonSection";
 import "./Card.css";
 
 const Card = (props) => {
-	const user = props.user;
-	// console.log(user);
-    const socialLinks = user["social-links"];
-	return (
-		<div className="body">
-			<div className="card" id="card">
-				{<UserDetails user={user} /> }
-				<ButtonSection socialLinks={socialLinks} />
-			</div>
-		</div>
-	);
+  const user = props.user;
+  const socialLinks = user["social-links"];
+
+  return (
+    <div className="card">
+      <UserDetails user={user} />
+      {/* <ButtonSection socialLinks={socialLinks} /> */}
+    </div>
+  );
 };
 
-export default Card;
+export default Card;

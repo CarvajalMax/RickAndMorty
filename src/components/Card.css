@@ -4,6 +4,8 @@
     font-size: 14px;
     height: 100vh;
     padding: 0 1.5rem;
+    display: flex;
+    justify-content: center;
   }
   
 .card {
