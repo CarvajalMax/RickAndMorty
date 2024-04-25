@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --LightBlack: #141414;
   --DarkGray: #1f1f1f;
   --Gray: #333333;
@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--Gray);
   }
   
   
@@ -19,4 +20,4 @@
     .card {
       padding: 2.3rem;
   }
-  }
+  } */

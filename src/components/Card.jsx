@@ -1,17 +1,18 @@
 import React from "react";
 import UserDetails from "./UserDetails";
-import ButtonSection from "./ButtonSection";
 import "./Card.css";
+import { NavLink } from "react-router-dom";
 
-const Card = (props) => {
-  const user = props.user;
-  const socialLinks = user["social-links"];
+const Card = ({ character }) => {
 
   return (
-    <div className="card">
-      <UserDetails user={user} />
-      {/* <ButtonSection socialLinks={socialLinks} /> */}
-    </div>
+    <NavLink className="nav-link" to={`/character?id=${character.id}`} >
+      <div className="total">
+        <div className="contenedor">
+          <UserDetails character={character} />
+        </div>
+      </div>
+    </NavLink>
   );
 };
 

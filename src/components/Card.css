@@ -1,22 +1,19 @@
-.body {
-    background-color: var(--LightBlack);
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    height: 100vh;
-    padding: 0 1.5rem;
+.contenedor
+{
+    background-color: var(--DarkGrey);
     display: flex;
-    justify-content: center;
-  }
-  
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 350px;
-    margin: auto;
-    text-align: center;
-    padding: 1.5rem;
-    color: var(--White);
-    background-color: var(--DarkGray);
-    border-radius: 20px;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    width: 340px;
+    height: 180px;
+    border-radius: 10px;  
+    justify-content:space-around;
+    margin: 30px;
+}
+
+
+.nav-link
+{
+  text-decoration: none;
 }

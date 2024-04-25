@@ -1,18 +1,17 @@
-import React from "react";
-import './ButtonSection.css';
-const ButtonSection = ({socialLinks}) => {
-	console.log(socialLinks)//arreglo con 5 objetos
-	return (
-		<div className="social section">
-			<div className="social__links section">
-				{
-					socialLinks.map(
-						socialLink => <button className="social__link" key={socialLink.name} >{socialLink.name}</button>
-					)
-				}		
-			</div>
-		</div>
-	);
-};
+/* import React from 'react'
+import "./ButtonSection.css";
 
-export default ButtonSection;
+
+const ButtonSection = ({socialLinks}) => {
+  console.log[socialLinks]
+  return (
+    <div className="botones">
+        {socialLinks.map(socialLink => 
+        <button key={socialLink.name}>{socialLink.name} </button>
+      )}
+          
+        </div>
+  )
+}
+
+export default ButtonSection */

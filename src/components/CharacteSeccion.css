@@ -1,0 +1,25 @@
+.descripcion
+{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    height: 60%;
+}
+
+
+#root .imagen
+{
+    border-radius: 10%;
+    height: 300px;
+    width: 300px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.descripcion p
+{
+    font-size: 25px;
+    margin-bottom:20px ;
+    font-weight: 700;
+}
